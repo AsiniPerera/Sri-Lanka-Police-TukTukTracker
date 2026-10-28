@@ -1,0 +1,66 @@
+{
+  "name": "tuktuk-tracker-api",
+  "version": "1.0.0",
+  "description": "Real-Time Three-Wheeler (Tuk-Tuk) Tracking & Movement Logging System for Sri Lanka Police",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node src/seed/seed.js",
+    "test": "jest --runInBand --forceExit",
+    "test:watch": "jest --watch --runInBand",
+    "test:coverage": "jest --runInBand --forceExit --coverage",
+    "dev:memory": "node scripts/dev-with-memory-db.js",
+    "link-asgardeo": "node scripts/link-asgardeo-user.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "globalSetup": "./tests/globalSetup.js",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "testTimeout": 120000,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/seed/**",
+      "!src/config/swagger.js"
+    ]
+  },
+  "mongodbMemoryServer": {
+    "version": "6.0.5"
+  },
+  "keywords": [
+    "tuk-tuk",
+    "tracking",
+    "police",
+    "sri-lanka",
+    "gps",
+    "rest-api"
+  ],
+  "author": "Sri Lanka Police - IT Division",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^4.1.0",
+    "mongodb": "^7.2.0",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^10.3.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^7.1.4"
+  }
+}
