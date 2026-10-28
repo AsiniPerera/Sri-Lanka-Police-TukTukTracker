@@ -1,7 +1,4 @@
 
-Student ID: COBSCCOMP242P-024    
-Name: G A U Perera
-
  
 User to Test Permissions:
 
