@@ -67,13 +67,7 @@ both paths at once (`LEGACY_LOGIN_ENABLED`) so the migration does not need a fla
 cd tuktuk-tracker && npm test      # 106 tests, 11 suites
 ```
 
-### Not yet configured in the Asgardeo console
 
-Per-route OAuth scope enforcement is implemented but switched off
-(`ASGARDEO_ENFORCE_SCOPES=false`): it needs the `TukTuk Tracker API` API resource to be
-created and subscribed first. The "Status" section at the top of the integration guide
-lists the four steps, in order. There is also no Google connection in the tenant yet, so
-`VITE_ASGARDEO_GOOGLE_CONNECTION` must stay unset.
 
 
 ### Demo credentials
